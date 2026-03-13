@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>AI Speaking Coach</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+🎤 <span>AI Speaking Coach</span>
+</div>
+
+<div class="header-controls">
+
+<select id="topicSelect" class="topic-select">
+
+<option value="">💬 General Conversation</option>
+
+<option value="Job Interview">💼 Job Interview</option>
+
+<option value="Travel">✈️ Travel</option>
+
+<option value="Daily Conversation">🗣 Daily Conversation</option>
+
+<option value="Technology">💻 Technology</option>
+
+</select>
+
+<div id="timer">00:00</div>
+
+</div>
+
+</header>
+
+
+<main class="main">
+
+<!-- LEFT PANEL -->
+
+<div class="left">
+
+<div class="card">
+
+<h3>GRAMMAR FEEDBACK</h3>
+
+<p id="grammarText">
+Your grammar feedback will appear here as you speak.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>AI RESPONSE</h3>
+
+<p id="aiText">
+The AI coach's response will appear here.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+
+<div class="right">
+
+<h3>CONVERSATION</h3>
+
+<div id="chatContainer" class="chat">
+
+</div>
+
+<div class="chat-buttons">
+
+<button id="clearChat">Clear</button>
+
+<button id="downloadChat">Download</button>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer class="controls">
+
+<button id="sendBtn" title="Send message to AI">➤</button>
+
+<input id="chatInput" placeholder="Type your message">
+
+<input id="wordInput" placeholder="Word to pronounce" title="Enter a word to hear pronunciation">
+
+<button id="pronounceBtn" title="Hear pronunciation">🔊</button>
+
+<button id="startBtn" title="Start speaking with microphone">🎤</button>
+
+<button id="stopBtn" title="Stop microphone">⛔</button>
+
+<button id="pauseBtn" title="Pause AI voice response">⏸</button>
+
+<button id="resumeBtn" title="Resume AI voice response">▶</button>
+
+<button id="stopPracticeBtn" title="End practice and view session report">📊</button>
+
+<select id="voiceSelect" title="Select AI voice"></select>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
